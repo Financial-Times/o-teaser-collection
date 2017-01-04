@@ -82,7 +82,44 @@
 			padding-left: inherit;
 			padding-top: 28px;
 			padding-right: 16px;
+			&:after {
+				display: none;
+				content: '';
+				position: absolute;
+				top: 0;
+				right: 8px;
+				border-right: 1px solid $_o-teaser-collection-color-thin-border;
+				height: calc(100% - 15px);
+			}
 		}
+
+		// Handle when to show vertical rule by breakpoint
+		@include oGridRespondTo($from: S, $until: M) {
+			.o-teaser-collection__item:nth-of-type(odd):after {
+				display: unset;
+			}
+		}
+
+		@include oGridRespondTo($from: M, $until: XL) {
+			.o-teaser-collection__item {
+				&:nth-of-type(3n+1),
+				&:nth-of-type(3n+2) {
+					&:after {
+						display: unset;
+					}
+				}
+			}
+		}
+
+		@include oGridRespondTo(XL) {
+			.o-teaser-collection__item:after {
+				display: unset;
+			}
+			.o-teaser-collection__item:last-of-type:after {
+				display: none;
+			}
+		}
+
 	}
 }
 
