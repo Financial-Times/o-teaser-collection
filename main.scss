@@ -167,14 +167,17 @@
 
 			// this adapts to fit the screen based on left o-grid-row margins
 			&:after {
+				margin-left: calc(-50vw + 5px);
 				@include oGridRespondTo(M) {
 					margin-left: calc(-50vw + 10px);
 				}
-				margin-left: calc(-50vw + 5px);
 			}
 
 			// modifies borders when stacked(S) and horizontal(M+)
 			.o-teaser-collection__item {
+				margin: 0;
+				border-bottom: 1px solid rgba(oColorsByName('white'), 0.2);
+				padding: 15px 0;
 
 				@include oGridRespondTo(M) {
 					margin: 20px 0;
@@ -182,9 +185,6 @@
 					border-bottom: 0;
 					padding: 0 10px;
 				}
-				margin: 0;
-				border-bottom: 1px solid rgba(oColorsByName('white'), 0.2);
-				padding: 15px 0;
 
 				&:last-child {
 					border: 0;
