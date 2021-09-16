@@ -1,5 +1,11 @@
 # o-teaser-collection
 
+***
+
+**This component has moved to the [Origami Component System](https://github.com/Financial-Times/origami).**
+
+***
+
 This component is for displaying collections of [o-teasers](http://registry.origami.ft.com/components/o-teaser).
 
 - [Usage](#usage)
